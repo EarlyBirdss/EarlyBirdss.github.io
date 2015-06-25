@@ -1,0 +1,27 @@
+/*===========reset============*/
+html,body,a,p,h1,h2,h3,h4,h5,h6,strong,em,span,i,input,textarea,img,button,select,li,ol,ul,table,dd,dl,dt{
+    padding: 0;
+    margin:0;
+    outline:none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-size:14px;
+}
+strong,em{
+    font-style: normal;
+    font-weight: normal;
+}
+input,button{
+    border:none;
+}
+ul,li,ol{
+    list-style: none;
+}
+body{
+    font-size:14px;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+a{
+    text-decoration: none;
+}

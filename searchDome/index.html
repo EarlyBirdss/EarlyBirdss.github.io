@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>bing search</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+            font-size:14px;
+            font-family: "Microsoft YaHei", "微软雅黑";
+            color:#333;
+        }
+        body{
+            background:#333;
+        }
+        .bg-div{
+            width:1228px;
+            height:690px;;
+            background:url("river.jpg");
+            margin:0 auto;
+        }
+        .search-box{
+            position:absolute;
+            top:200px;
+            left:300px;
+            overflow: hidden;
+        }
+        .logo{
+            width:110px;
+            height:60px;
+            background:url("logo.png") no-repeat;
+            float:left;
+            margin:-4px 20px 0 0;
+        }
+        form{
+            background:#FFF;
+            float:left;
+            padding:5px;
+            overflow: hidden;
+        }
+        .search-input-text{
+            width:300px;
+            height:29px;
+            line-height:29px;
+            float: left;
+            border:none;
+            outline: none;
+        }
+        .search-input-button{
+            width:29px;
+            height:29px;
+            background: url("search-button.png");
+            float: right;
+            border:none;
+            cursor:pointer;
+        }
+        .suggest{
+            width:349px;
+            background:#FFF;
+           /* position: absolute;
+            left:430px;
+            top:239px;*/
+            border-top:2px solid #CCC;
+        }
+        .suggest ul li{
+            list-style-type: none;
+            line-height:25px;
+            cursor:pointer;
+            padding:3px;
+        }
+        .suggest ul li:hover{
+            background: #E5E5E5;
+            text-decoration:underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-div">
+    <div class="search-box">
+        <div class="logo">
+
+        </div><!--logo-->
+        <form action="" method="get" id="search_form">
+            <input type="text" class="search-input-text" id="search_input">
+            <input type="submit" value=""  class="search-input-button" id="search_submit">
+        </form>
+    </div><!--search-box-->
+    <div class="suggest" id="search_suggest" style="display:none">
+        <ul id="suggest_ul">
+            <li>搜索结果1</li>
+            <li>搜索结果2</li>
+        </ul>
+    </div>
+</div>
+
+<!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+    $('#search_input').bind('keyup',function(){
+        var searchValue = $('#search_input').val();
+        $.get('http://api.bing.com/qsonhs.aspx?q='+searchValue,function(d){
+            var d = d.AS.Results[0].Suggests;
+            var html = '';
+            for(var i = 0;i < d.length;i++){
+                html += '<li>'+d[i].Txt+'</li>';
+            }
+            $('suggest_ul').html(html);
+            $('#search-suggest').show().css({
+                position:'absolute',
+                top:$('#search_form').offset().top+$('#search_form').height()+10,
+                left:$('#search_form').offset().left
+            });
+        },'json');
+    });
+    $(document).bind('click',function(){
+        $('#search-suggest').hide();
+    });
+    $(document).delegata('li','click',function(){
+        var keyword = $(this).text();
+        location.href = 'http://cn.bing.com/search?q='+keyword;
+    });
+</script>-->
+
+<script>
+
+    function getDom(id){
+        return document.getElementById(id);
+    }
+
+    var search_input = getDom('search_input');
+    var search_form = getDom('search_form');
+    var search_suggest = getDom('search_suggest');
+    var suggest_ul = getDom('suggest_ul');
+    function addEvent(element,event,callback){
+        if(element.addEventListener){
+            element.addEventListener(event,callback,false);
+        }
+        if(element.attachEvent){
+            element.attachEvent('on'+event,callback);
+        }
+    }
+    var getElementLeft = function(element){
+        var actualLeft = element.offsetLeft;
+        var current = element.offsetParent;
+        while( current != null){
+            actualLeft += current.offsetLeft;
+            current = element.offsetParent;
+        }
+        return actualLeft;
+    };
+    var getElementTop = function(element){
+        var actualTop = element.offsetTop;
+        var current = element.offsetParent;
+        while( current != null){
+            actualTop += current.offsetTop;
+            current = element.offsetParent
+        }
+        return actualTop;
+    };
+
+    var ajaxGet = function(url,callback){
+      var _xhr = null;
+        if(window.XMLHttpRequest){
+            _xhr = new window.XMLHttpRequest();
+        }else if(window.ActiveXObject){
+            _xhr = new ActiveXObject('Msxml2.XMLHTTP');
+        }
+        _xhr.onreadystatechange = function(){
+            if(_xhr.readyState == 4 && _xhr.status == 200){
+                callback(JSON.parse(_xhr.responseText));
+            }
+        };
+        _xhr.open('get',url,false);
+        _xhr.send(null);
+    };
+
+    var delegateEvent = function(target,event,fn){
+        addEvent(document,event,function(e){
+            if(e.target.nodeName == target.toUpperCase()){
+                fn.call(e.target);
+            }
+        });
+    };
+
+    addEvent(search_input,'keyup',function(){
+        var searchValue = search_input.value;
+        ajaxGet('http://api.bing.com/qsonhs.aspx?q='+searchValue,function(d) {
+            var d = d.AS.Results[0].Suggests;
+            var html = '';
+            for (var i = 0; i < d.length; i++) {
+                html += '<li>' + d[i].Txt + '</li>';
+            }
+        suggest_ul.innerHTML = html;
+        search_suggest.style.top = getElementTop(search_form)+38+'px';
+        search_suggest.style.left = getElementLeft(search_form)+'px';
+        search_suggest.style.position = 'absolute';
+        search_suggest.style.display = 'block';
+    }); });
+
+    delegateEvent('li','click',function(){
+        var keyword = this.innerHTML;
+        location.href = 'http://cn.bing.com/search?q='+keyword;
+    });
+</script>
+</body>
+</html>

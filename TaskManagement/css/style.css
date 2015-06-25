@@ -1,0 +1,345 @@
+/*===========reset============*/
+html,body,a,p,h1,h2,h3,h4,h5,h6,strong,em,span,i,input,textarea,img,button,select,li,ol,ul,table,dd,dl,dt{
+    padding: 0;
+    margin:0;
+    outline:none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-size:14px;
+}
+strong,em{
+    font-style: normal;
+    font-weight: normal;
+}
+input,button{
+    border:none;
+}
+ul,li,ol{
+    list-style: none;
+}
+body{
+    font-size:14px;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+body{
+    min-width:1000px;
+    min-height: 600px;
+    margin:auto;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+/*================normal=========================*/
+.header{
+    height:20px;
+    background: #DFDFDF;
+    padding:20px;
+    line-height: 20px;
+}
+.header h1{
+    color:#666;
+    font-size: 24px;
+    font-weight: 500;
+}
+.main{
+    position: relative;
+    padding-left: 602px;
+}
+/*==========classLeft================*/
+.classLeft{
+    position: absolute;
+    left: 0;
+    box-sizing:border-box;
+    padding:20px 0;
+    width:300px;
+    float: left;
+    min-height:579px;
+    background:#F3F3F3;
+}
+
+.classLeft h2{
+    padding:0 10px 10px 10px;
+    line-height: 30px;
+    height:30px;
+}
+.classLeft #all{
+    cursor:pointer;
+}
+.classLeft ul li{
+    line-height: 30px;
+    text-indent:10px;
+}
+.classLeft ul.all-task{
+
+}
+.classLeft dl{
+    margin:9px 0;
+}
+.classLeft dd{
+    text-indent:30px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.classLeft li h3{
+    height:30px;
+    line-height: 30px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.classLeft  dd h4{
+    cursor:pointer;
+}
+.taskCenter dd:hover i.removeTask,
+.classLeft h4:hover i.removeTask,
+.classLeft  h3:hover i.removeTask{
+    display: block;
+}
+i.removeTask{
+     float:right;
+    /* display: none;*/
+     margin-top:10px;
+     margin-right:10px;
+ }
+.taskCenter .addNewTask,
+.classLeft .addNewCate{
+    width:290px;
+    height:40px;
+    line-height: 40px;
+    border-top:1px solid #ddd;
+    position: absolute;
+    bottom:0;
+    left:0;
+    padding-left:10px;
+    cursor: pointer;
+}
+.classLeft .addNewCate{
+    width:290px;
+    height:40px;
+}
+.taskCenter .addNewTask{
+    height:40px;
+    background:#f3f3f3;
+}
+.classLeft .addNewTask i,
+.classLeft .addNewCate i{
+    padding-right: 5px;
+}
+
+/*=========taskCenter==========*/
+.main .taskCenter{
+    position: absolute;
+    left: 300px;
+    float: left;
+    border:1px solid #ddd;
+    border-top:none;
+    border-bottom:none;
+    min-height:579px;
+    width:300px;
+}
+.cateList{
+    line-height: 40px;
+    height:40px;
+    background:#F3F3F3;
+    border-bottom:1px solid #ddd;
+}
+.cateList li{
+    float: left;
+    padding:0 15px;
+}
+.cateList li a{
+    padding:1px 5px;
+}
+a.cur{
+    background: #FFF;
+    border:1px solid #ddd;
+}
+.taskItem{
+    line-height:30px;
+}
+.taskItem .taskTime{
+    background: #fffae3;
+    padding:0 15px;
+}
+.taskItem dl{
+    text-indent:25px;
+    cursor: pointer;
+}
+.taskItem .finished{
+    color: #1bda0a;
+}
+
+
+
+/*===========detailRight===================*/
+.main .editRight,
+.main .detailRight{
+    float: left;
+    position: relative;
+    width:100%;
+    min-height:579px;
+}
+.detailRight  .detailTitle{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    font-weight: bolder;
+    border-bottom:1px solid #ddd;
+    background:#f3f3f3;
+    text-indent:10px;
+}
+.detailTitle .editIcon{
+    position: absolute;
+    right: 10px;
+    top:5px;
+}
+.detailRight button i{
+     margin-right:5px;
+ }
+.detailRight .editIcon i{
+    margin-right:15px;
+    cursor:pointer;
+}
+
+.detailRight  .finishDate{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    border-bottom:1px solid #ddd;
+    background: #fffae3;
+    text-indent:10px;
+}
+.detailRight  .detailContent{
+    padding:10px 0;
+    text-indent:10px;
+}
+.detailRight .btn-group{
+    overflow: hidden;
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    position:absolute;
+    bottom:0;
+    border-top:1px solid #ddd;
+    background:#EEE;
+}
+.detailRight button{
+    display: inline-block;
+    height:40px;
+    width:50%;
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+    cursor:pointer;
+}
+.detailRight input{
+    width:250px;
+    height:96%;
+    background: inherit;
+}
+.detailRight textarea{
+    border:none;
+    min-height:150px;
+    width:80%;
+    overflow: auto;
+    display: block;
+    margin-left: 10px;
+    margin-top:10px;
+    font-size:14px;
+    text-indent: 10px;
+}
+.detailRight .editTip{
+    color:#C00;
+    font-size:16px;
+    padding-left: 20px;
+}
+
+/*=======mask===========*/
+#mask{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    background:rgba(0,0,0,0.2);
+}
+
+/*========popOver==========*/
+#popover{
+    width:400px;
+    height:180px;
+    margin:auto;
+    position: absolute;
+    z-index: 2;
+    background: #e8e8e8;
+}
+#popover .title{
+    height: 50px;
+    width:100%;
+    line-height: 50px;
+    text-indent: 20px;
+    font-size:16px;
+    font-weight: 600;
+    color:#FFF;
+    background:#C00;
+    cursor:move;
+}
+#popover .title i{
+    float:right;
+    margin-right: 10px;
+    margin-top:8px;
+    cursor:pointer;
+}
+#popover p,
+#popover input{
+    width:300px;
+    height:40px;
+    margin:20px auto;
+    display: block;
+}
+#popover p{
+    color: #880000;
+    font-weight: 600;
+    font-size:16px;
+    line-height: 40px;
+    text-align: center;
+}
+#popover input{
+    border:1px solid #ddd;
+    padding-left:10px;
+}
+#popover button{
+    width:110px;
+    height:40px;
+    font-size:16px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    color:#FFF;
+    display: inline-block;
+    margin-left:5px;
+    margin-right:5px;
+    position: absolute;
+    bottom:10px;
+}
+#popover .confirm{
+    background: #3ab94f;
+    left:80px;
+}
+#popover .cancel{
+    background: #eb6166;
+    right:80px;
+}
+/*====usual=========*/
+.hidden{
+    display:none;
+}
+.show{
+    display:block;
+}
+.current{
+    background: rgba(0,0,0,0.1);
+}

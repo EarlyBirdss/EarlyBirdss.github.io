@@ -1,0 +1,143 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    padding:0;
+    margin:0;
+    font-size:10pt;
+    font-family:"Microsoft YaHei";
+}
+.topMenu{
+    width:210px;
+    border:2px solid #C00;
+    position: relative;
+}
+.topMenu .topTitle{
+    height:40px;
+    line-height: 40px;
+    color:#FFF;
+    background:#C00;
+    padding-left:20px;
+    font-size:1.1em;
+}
+.topMenu li{
+    list-style-type:none;
+    color:#313131;
+    background: url("images/icons/more.jpg") right center no-repeat;
+    line-height: 30px;
+    height:30px;
+    padding-left:8px;
+}
+.topMenu li .smallcate{
+    display: none;
+    height:20px;
+    line-height: 20px;
+    font-size:0.8em;
+    font-weight: normal;
+}
+.topMenu li .smallcate a{
+    padding-right: 6px;
+}
+.topMenu li a{
+    text-decoration:none;
+    color:#313131;
+}
+.topMenu li:hover{
+    background:none;
+    border:1px solid #DDD;
+    -webkit-box-shadow: 0 0 8px #DDD;
+    -moz-box-shadow: 0 0 8px #DDD;
+    box-shadow: 0 0 8px #DDD;
+    height:50px;
+    border-left:4px solid #C00;
+}
+.topMenu li a:hover{
+    color:#C00;
+    font-weight:bold;
+    text-decoration:underline;
+}
+.topMenu .liHover span{
+    display: inline-block;
+    background:#FFF;
+    width:20px;
+    height:50px;
+    float: right;
+    z-index:999;
+    position: relative;
+}
+.topMenu .liHover .subMenu{
+    display: block;
+}
+.topMenu .liHover .smallcate{
+    display: block;
+}
+/*.main .topMenu*/ .subMenu{
+    display: none;
+    background: #FFF;
+    width: 980px;
+    z-index:10;
+    position: absolute;
+    left:200px;
+    top:40px;
+    border:1px solid #C00;
+    box-shadow: 0 0 8px #C00;
+    padding:10px;
+    /*border-left:none;*/
+}
+.subMenu .leftList{
+    float: left;
+    width:660px;
+    margin:5px;
+}
+.subMenu .leftList dl{
+    border-bottom: 1px solid #DDD;
+    margin-bottom:10px;
+}
+.subMenu .leftList dt{
+    width:90px;
+    height:22px;
+    line-height: 22px;
+    text-align: right;
+    display: inline-block;
+    font-weight:bold;
+    overflow: hidden;
+    float: left;
+}
+.subMenu .leftList dt a{
+    color:#C00;
+    text-decoration:underline;
+    padding-right:20px;
+    font-size:1.1em;
+}
+.subMenu .leftList dd{
+    overflow: hidden;
+    display: block;
+}
+.subMenu .leftList dd a{
+    border-left:1px solid #DDD;
+    color:#737373;
+    padding:0 8px;
+    line-height: 14px;
+    height:14px;
+    margin:4px 0;
+}
+
+.subMenu .rightAd{
+    width:250px;
+    float: right;
+}
+.subMenu .rightAd dl dt{
+    color:#C00;
+    font-weight: 600;
+}
+.subMenu .rightAd dd{
+    height:22px;
+}
+
+.out{
+    position: relative;
+    right:-80px;
+    bottom:-45px;
+}
+

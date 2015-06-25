@@ -1,0 +1,63 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    width:600px;
+    height:400px;
+    overflow: hidden;
+    position: relative;
+}
+.container img{
+    width:600px;
+    height:400px;
+}
+.container .list{
+
+}
+.container .buttons{
+    width:90px;
+    height:15px;
+    position: absolute;
+    left:50%;
+    margin-left:-45px;
+    bottom:30px;
+}
+.container .buttons span{
+    display: block;
+    height: 15px;
+    width:15px;
+    background: #ff4513;
+    border-radius: 15px;
+    border:1px solid #FFF;
+    margin:2px 5px;
+}
+.container:hover .arrow{
+    display: block;
+}
+.container .arrow{
+    display: none;
+    width:40px;
+    height:40px;
+    background: rgba(0,0,0,0.2);
+    font-size: 36px;
+    font-weight:bold;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    margin-top:-20px;
+}
+.container .arrow:hover{
+    background: rgba(0,0,0,0.7);
+}
+.container a{
+    color:#FFF;
+    text-decoration: none;
+}
+.container #prev{
+    left:20px;
+}
+.container #next{
+    right:20px;
+}

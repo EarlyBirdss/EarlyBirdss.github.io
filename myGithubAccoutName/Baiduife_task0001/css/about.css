@@ -1,0 +1,18 @@
+.main{
+    width:980px;
+    margin:50px auto;
+}
+.main .left,
+.main .right{
+    width:49.5%;
+    background:#FFF;
+    min-height: 300px;
+}
+.main .left{
+    float: left;
+    font-size: 20px;
+}
+.main .right{
+    float: right;
+    font-size:14px;
+}

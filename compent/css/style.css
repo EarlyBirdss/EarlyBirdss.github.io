@@ -1,0 +1,113 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-size:14px;
+    color:#333;
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+}
+a{
+    color:#333;
+    text-decoration: none;
+}
+.list{
+    width:540px;
+    margin:20px auto;
+}
+.list .box{
+    border-top:1px solid #CCC;
+    padding-top:20px;
+}
+.list .box img{
+    height:60px;
+    width:60px;
+    float:left;
+    margin-right:10px;
+}
+.list .box .main{
+    width:470px;
+    float:right;
+}
+.list .box .main a{
+    color:#21BE92;
+}
+.list .box .main img{
+    width:200px;
+    height:230px;
+    margin:10px 0;
+}
+.list .info{
+    width:470px;
+    float: right;
+    clear: both;
+    font-size: 12px;
+    line-height: 17px;
+    color:#eaeaea;
+    overflow: hidden;
+}
+.list .info .time{
+    background: url("../images/bg1.jpg") no-repeat;
+    padding-left:20px;
+    display: block;
+    float: left;
+}
+.list .info .praise{
+    background: url("../images/bg2.jpg") no-repeat;
+    padding-left:20px;
+    float: right;
+    display: block;
+}
+.list .info a{
+    color:#369;
+}
+.list .info .praise:hover{
+    text-decoration: underline;
+    background: url("../images/bg3.jpg") no-repeat;
+}
+.list .praise-total{
+    margin-top:10px;
+    height:30px;
+    width:445px;
+    float: right;
+    padding-left:25px;
+    background:  #EFEFEF url("../images/praise.png") no-repeat  5px 6px ;
+    line-height: 30px;
+    font-size:12px;
+}
+.list .comment-list{
+    border-top:1px solid #DDDDDD;
+    margin-top:10px;
+    width:470px;
+    float: right;
+    padding:10px 0;
+    font-size:12px;
+    line-height: 15px;
+}
+.list .comment-list img{
+    width:30px;
+    height:30px;
+    margin-right: 10px;
+    /*float: left;*/
+}
+.list .comment-list a{
+    color:#369;
+}
+.list .comment-list .comment-time{
+    color:#eaeaea;
+}
+.list .comment-list .comment-praise{
+    display:block;
+    width:25px;
+    padding-left:20px;
+    float: right;
+    background: url("../images/praise.png") no-repeat center left;
+    margin-left:10px;
+    line-height: 15px;
+}
+.list .comment-list .comment-operate{
+    display: block;
+    float: right;
+    line-height: 15px;
+}

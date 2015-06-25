@@ -1,0 +1,47 @@
+a,img,div,i,em,strong,span,ul,ol,li,h1,dl,dt,dd,h2,h3,h4,h5,h6,form,input,textarea,section,body,p{
+    padding:0;
+    margin: 0;
+}
+input{
+    border:none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:14px;
+    font-style: normal;
+}
+strong,em,i{
+    font-style: normal;
+}
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu, Arial, Helvetica, sans-serif;
+    color:#515151;
+    background: #f6f6f6;
+}
+a:link,a:visited,a:hover,a:active{
+    color:#515151;
+    text-decoration: none;
+}
+ul,li,ol,dd,dt,dl{
+    list-style: none;
+}
+
+.com-width{
+    width:1200px;
+    margin:0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix{
+    clear:both;
+}
+.normal-color{
+    color: #ff70a2;
+}
+.hidden{
+    display: none;
+}

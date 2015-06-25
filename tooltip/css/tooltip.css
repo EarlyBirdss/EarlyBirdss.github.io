@@ -1,0 +1,180 @@
+html{
+    width: 100%;
+    height:100%;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -weibkit-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100%;
+    background: #47c9af;
+    color:#74777b;
+    font-weight: 300;
+    font-size:1.5em;
+    font-family: "Raleway","Arial";
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a:link,a:hover,a:visited,a:focus{
+    text-decoration: none;
+}
+*,*:after,*:before{
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:after,*:before{
+    display: block;
+    content:"";
+}
+*:after{
+    clear: both;
+}
+
+
+.top-nav{
+    margin:150px auto 0;
+    width:650px;
+    height:120px;
+    overflow: hidden;
+}
+.top-nav li{
+    display: inline-block;
+    font-size:0.6em;
+    padding:0 0.5em;
+    color:rgba(0,0,0,0.3);
+    font-weight: 600;
+}
+.top-nav li a{
+    color:rgba(0,0,0,0.2);
+    transition: 0.5s;
+}
+.top-nav li a:hover{
+    color:rgba(255,255,255,1);
+}
+
+.nav{
+    width: 800px;
+    height:300px;
+    margin: 0 auto;
+}
+.nav li{
+    display: inline-block;
+    margin: 0 1em;
+}
+.nav .tooltip{
+    display: inline-block;
+    font-weight: 700;
+    color:rgba(0,0,0,0.3);
+    padding: 0.15em 0.25em 0 0;
+    position: relative;
+    z-index: 999;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+.tooltip:hover{
+    color:rgba(255,255,255,1);
+}
+.nav .tooltip-content{
+    clear: both;
+    display: inline-block;
+    position: absolute;
+    z-index: 9999;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    left:50%;
+    margin-left: -40px;
+    bottom:100%;
+    margin-bottom: 20px;
+    color:#47c9af;
+    text-align: center;
+    padding-top: 25px;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+.tooltip .tooltip-content i{
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.nav .tooltip-content::after{
+    display: block;
+    content: "";
+    width: 30px;
+    height: 20px;
+    background:url(../img/tooltip1.svg) no-repeat center center;
+    position: absolute;
+    top: 100%;
+    margin-top: -7px;
+    left:50%;
+    margin-left: -15px;
+
+}
+.tooltip-effect-1 .tooltip-content{
+    -webkit-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+.tooltip-effect-1 .tooltip-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i{
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) rotate3d(1,1,1,0deg) scale3d(1,1,1);
+    transform: translate3d(0,0,0) rotate3d(1,1,1,0deg) scale3d(1,1,1);
+}
+
+.tooltip-effect-2 .tooltip-content{
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+.tooltip-effect-2 .tooltip-content i{
+    -webkit-transform: translate3d(0,15px,0));
+    transform: translate3d(0,15px,0);
+}
+
+.tooltip-effect-3 .tooltip-content{
+     -webkit-transform: translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+     transform:translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+     -webkit-transform-origin: center bottom;
+     transform-origin: center bottom;
+ }
+.tooltip-effect-3 .tooltip-content i{
+    -webkit-transform: scale3d(0,0,1);
+    transform:scale3d(0,0,1);
+}
+.tooltip-effect-4 .tooltip-content{
+    -webkit-transform: translate3d(0,-20px,0);
+    transform:translate3d(0,-20px,0);
+}
+.tooltip-effect-4 .tooltip-content i{
+    -webkit-transform: translate3d(0,20px,0);
+    transform:translate3d(0,20px,0);
+}
+.tooltip-effect-5 .tooltip-content{
+    -webkit-transform: scale3d(0,0,1);
+    transform:scale3d(0,0,1);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+.tooltip-effect-5 .tooltip-content i{
+    -webkit-transform: translate3d(0,20px,0);
+    transform:translate3d(0,20px,0);
+}

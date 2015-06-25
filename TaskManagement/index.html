@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>task0002--任务管理器</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="header" title="logo">
+    <h1>GTD Tools</h1>
+</div><!--header-->
+<div class="main">
+    <div class="classLeft">
+        <h2 id="all">所有任务 (<span class="task-num">0</span>)</h2>
+        <h2>分类列表</h2>
+        <ul class="all-task">
+            <li class="classList">
+                <h3 id="default" class="current">
+                    <i class="icon-folder-open"></i>默认分类 (<span class="task-num">0</span>)
+                    <!--<i class=" icon-remove removeTask"></i>-->
+                </h3>
+
+            </li>
+        </ul>
+        <div class="addNewCate">
+            <span><i class="icon-plus"></i>新增分类</span>
+        </div>
+    </div><!--listLeft-->
+    <div class="taskCenter">
+        <div class="cateList">
+            <ul>
+                <li><a href=javascript:; class="cur">所有</a></li>
+                <li><a href=javascript:;>未完成</a></li>
+                <li><a href=javascript:;>已完成</a></li>
+            </ul>
+        </div>
+        <div class="taskList">
+
+        </div>
+    <div class="addNewTask">
+        <span><i class="icon-plus"></i>新增任务</span>
+    </div>
+</div><!--taskCenter-->
+    <div class="detailRight">
+
+    </div>
+</div>
+
+<div id="mask" class="hidden"></div>
+<div id="popover" class="hidden">
+    <h2 class="title"><i class="icon-remove icon-2x"></i></h2>
+    <button class="confirm">确定</button>
+    <button class="cancel">取消</button>
+</div>
+<script src="js/util.js" type="text/javascript"></script>
+<script src="js/constructor.js" type="text/javascript"></script>
+<script src="js/support.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

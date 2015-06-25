@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PDF简历</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        width:595px;
+        height:842px;
+        margin:0 auto;
+    }
+    .sideBar{
+        width:250px;
+        height:100%;
+        background:rgba(41, 180, 240,.5);
+        float: left;
+        color:#FFF;
+        padding:20px 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .main{
+        width:345px;
+        height:100%;
+        float: right;
+        padding:20px 10px 20px 30px;
+        border-left:3px solid #FFF:
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color:rgba(0,0,0,.7);
+        background:#f3f3f3;
+    }
+    .sideBar .photo_intro{
+
+    }
+    .photo_intro .photo{
+        width:100px;
+        height:100px;
+        background: url("images/PDFphoto.png")  center center no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        border:4px solid #FFF;
+        margin-left:65px;
+    }
+    .photo_intro .intro{
+        text-align: center;
+        margin:20px 0;
+    }
+    .intro h3{
+        font-size:24px;
+        font-weight:bold;
+        margin:5px 0;
+    }
+    .intro h6{
+        font-size:12px;
+        color:rgba(0,0,0,.8);
+        margin:5px 0;
+    }
+    .intro h4{
+        font-size:16px;
+        color:rgba(0,0,0,.6);
+        font-weight:bold;
+    }
+    .skill_item{
+        width: 100%;
+        height:30px;
+        margin:5px 0;
+        overflow: hidden;
+    }
+    .skill label{
+        display:inline-block;
+        width:60px;
+        height:30px;
+        text-align: right;
+        margin-right:15px;
+        line-height: 30px;
+    }
+    .skill .progress_box{
+        margin-top:12px;
+        display: inline-block;
+        width:140px;
+        height:14px;
+        background:rgba(0,0,0,.3);
+        border-radius: 14px;
+    }
+    .progress{
+        background:#FFF;
+        height:100%;
+        border-radius: 14px 0 0 14px;
+    }
+    .progress_HTML{
+        width:85%;
+    }
+    .progress_CSS{
+        width:85%;
+    }
+    .progress_JS{
+        width:75%;
+    }
+    .progress_JQ{
+        width:70%;
+    }
+    .progress_BS{
+        width:45%;
+    }
+    .progress_AJAX{
+        width:60%;
+    }
+    .progress_LESS{
+        width:35%;
+    }
+    .progress_Canvas{
+        width:20%;
+    }
+    .contact{
+        width:100%;
+        height:250px;
+        margin-top:200px;
+    }
+    .contact_item{
+        margin:5px auto 5px 12px;;
+    }
+    .contact_item i{
+        margin-right:10px;
+    }
+    .main .time_line{
+        font-size:24px;
+        margin:10px 0;
+        color:rgba(41, 180, 240,.5);
+    }
+ /*   .main strong{
+        background:rgba(41, 180, 240,.5);
+        border-radius:2px;
+        padding:0 2px;
+        margin:0 3px;
+        color:#FFF;
+    }*/
+    .main p{
+        margin:10px 0;
+        line-height:29px;
+        text-indent: 30px;
+    }
+</style>
+<body>
+<div class="sideBar">
+<div class="photo_intro">
+    <div class="photo"></div>
+    <div class="intro">
+        <h3>杨梦迪</h3>
+        <h6>江西师范大学计算机系科学与技术班</h6>
+        <h4>【前端工程师实习生】</h4>
+    </div>
+</div>
+    <div class="skill">
+        <div class="skill_item"><label>HTML</label><div class="progress_box"><div class="progress progress_HTML"></div></div></div>
+        <div class="skill_item"><label>CSS3</label><div class="progress_box"><div class="progress progress_CSS"></div></div></div>
+        <div class="skill_item"><label>JavaScript</label><div class="progress_box"><div class="progress progress_JS"></div></div></div>
+        <div class="skill_item"><label>jQuery</label><div class="progress_box"><div class="progress progress_JQ"></div></div></div>
+        <div class="skill_item"><label>Ajax</label><div class="progress_box"><div class="progress progress_AJAX"></div></div></div>
+        <div class="skill_item"><label>BootStrap</label><div class="progress_box"><div class="progress progress_BS"></div></div></div>
+        <div class="skill_item"><label>LESS</label><div class="progress_box"><div class="progress progress_LESS"></div></div></div>
+        <div class="skill_item"><label>Canvas</label><div class="progress_box"><div class="progress progress_Canvas"></div></div></div>
+    </div>
+    <div class="contact">
+        <div class="contact_item"><i class="icon-user"></i>EarlyBirdss.github.io/resume</div>
+        <div class="contact_item"><i class="icon-envelope "></i>Mengdiyang@126.com</div>
+        <div class="contact_item"><i class="icon-github "></i>MrHundred.github.io</div>
+        <div class="contact_item"><i class="icon-phone "></i>17687910163</div>
+    </div>
+</div>
+<div class="main">
+    <div class="time_line">2014年10月</div>
+    <div class="content">
+        <p>
+            开始了解前端技术，加入学院宏奕工作室，期间用<strong>Bootstrap</strong>和<strong>jQuery</strong>写过行数不多的代码。
+        </p>
+    </div>
+    <div class="time_line">2015年1月</div>
+    <div class="content">
+        <p>
+            寒假期间对所学做了一些整理，完成<strong>二次元首页存HTML、CSS的模仿</strong>
+        </p>
+    </div>
+    <div class="time_line">2015年3月</div>
+    <div class="content">
+        <p>
+            主要通过<strong>慕课网</strong>重新学习前端技术，开始<strong>《JavaScript高级程序设计》</strong><strong>《JavaScript语言精粹》</strong>
+            <strong>《众妙之门》</strong>等的阅读。
+        </p>
+    </div>
+    <div class="time_line">2015年4月</div>
+    <div class="content">
+        <p>
+            跟随(未加入)<strong>百度前端学院IFE</strong>深入学习前端技术，在task01中制作了简单的<strong>个人博客</strong>对<strong>网页常见布局</strong>、
+            <strong>简单兼容及代码规范</strong>的理解更加深入。
+        </p>
+        <p>
+            在task02中，<strong>封装个人jQuery库</strong>，同时在此期间不断的在慕课网上刷课程，
+            会<strong>页面内常见JavaScript操作</strong>，以及对<strong>JavaScript面向对象编程</strong>有了浅显的了解。
+        </p>
+        <p>
+            task03,根据设计稿<strong>独立完成个人任务管理器</strong>。
+            此段时间，编程能力提升最为迅速，算的上最为得意的作品。
+            对<strong>闭包</strong><strong>构造函数</strong><strong>设计模式</strong>有些许的理解。代码已提交至github,在线预览EarlyBirdss.github.io/TaskManagement
+        </p>
+    </div>
+</div>
+</body>
+</html>
