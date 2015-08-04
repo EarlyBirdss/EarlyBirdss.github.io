@@ -8,17 +8,8 @@
  *
  */
 window.onload = function() {
-    var cates = data.getCateArray();
-    var defaultTasks = data.getCurCateObjTaskArray('default');
-
-    var taskCenter = $('.taskCenter')[0];
-    var ul = $('.classLeft')[0].getElementsByTagName('ul')[0];
-    var html = '';
-    var arr = [];
-
-    var i, n;
-
-
+    
+    
     //window.localStorage.clear();
     if( !data.getItem('all') || !data.getItem('default')) {
         var allTask = new Cate('全部分类', null, false, 'all');
@@ -30,15 +21,28 @@ window.onload = function() {
 
     method.updateCurrentCate('default');
     method.updateUnfinishedNum('default');
+    
+    
+    var cates = data.getCateArray();
+    var defaultTasks = data.getCurCateObjTaskArray('default');
+
+    var taskCenter = $('.taskCenter')[0];
+    var ul = $('.classLeft')[0].getElementsByTagName('ul')[0];
+    var html = '';
+    var arr = [];
+
+    var i, n;
 
 
-    var st = window.localStorage;
+
+
+    /*var st = window.localStorage;
     for(var k = 0; k < st.length; k++){
         var key = st.key(k);
         var value = st.getItem(key);
         console.log(key);
         console.log(value);
-    }
+    }*/
 
 
 
