@@ -10,7 +10,8 @@
     body{
         width:595px;
         height:842px;
-        margin:0 auto;
+        margin:0 auto;/*
+        -webkit-transform: rotate(90deg);*/
     }
     .sideBar{
         width:250px;
@@ -120,7 +121,7 @@
     .contact{
         width:100%;
         height:250px;
-        margin-top:200px;
+        margin-top:230px;
     }
     .contact_item{
         margin:5px auto 5px 12px;;
@@ -145,6 +146,14 @@
         line-height:29px;
         text-indent: 30px;
     }
+    .main li{
+        line-height: 29px;
+        list-style: square;
+        margin-left:20px;
+    }
+    /*span{
+        font-size:12px;
+    }*/
 </style>
 <body>
 <div class="sideBar">
@@ -161,7 +170,6 @@
         <div class="skill_item"><label>CSS3</label><div class="progress_box"><div class="progress progress_CSS"></div></div></div>
         <div class="skill_item"><label>JavaScript</label><div class="progress_box"><div class="progress progress_JS"></div></div></div>
         <div class="skill_item"><label>jQuery</label><div class="progress_box"><div class="progress progress_JQ"></div></div></div>
-        <div class="skill_item"><label>Ajax</label><div class="progress_box"><div class="progress progress_AJAX"></div></div></div>
         <div class="skill_item"><label>BootStrap</label><div class="progress_box"><div class="progress progress_BS"></div></div></div>
         <div class="skill_item"><label>LESS</label><div class="progress_box"><div class="progress progress_LESS"></div></div></div>
         <div class="skill_item"><label>Canvas</label><div class="progress_box"><div class="progress progress_Canvas"></div></div></div>
@@ -169,44 +177,60 @@
     <div class="contact">
         <div class="contact_item"><i class="icon-user"></i>EarlyBirdss.github.io/resume</div>
         <div class="contact_item"><i class="icon-envelope "></i>Mengdiyang@126.com</div>
-        <div class="contact_item"><i class="icon-github "></i>MrHundred.github.io</div>
+        <div class="contact_item"><i class="icon-github "></i>EarlyBirdss.github.io</div>
         <div class="contact_item"><i class="icon-phone "></i>17687910163</div>
     </div>
 </div>
 <div class="main">
-    <div class="time_line">2014年10月</div>
+    <div class="time_line">自学篇</div>
     <div class="content">
         <p>
-            开始了解前端技术，加入学院宏奕工作室，期间用<strong>Bootstrap</strong>和<strong>jQuery</strong>写过行数不多的代码。
-        </p>
-    </div>
-    <div class="time_line">2015年1月</div>
-    <div class="content">
-        <p>
-            寒假期间对所学做了一些整理，完成<strong>二次元首页存HTML、CSS的模仿</strong>
-        </p>
-    </div>
-    <div class="time_line">2015年3月</div>
-    <div class="content">
-        <p>
-            主要通过<strong>慕课网</strong>重新学习前端技术，开始<strong>《JavaScript高级程序设计》</strong><strong>《JavaScript语言精粹》</strong>
-            <strong>《众妙之门》</strong>等的阅读。
-        </p>
-    </div>
-    <div class="time_line">2015年4月</div>
-    <div class="content">
-        <p>
-            跟随(未加入)<strong>百度前端学院IFE</strong>深入学习前端技术，在task01中制作了简单的<strong>个人博客</strong>对<strong>网页常见布局</strong>、
-            <strong>简单兼容及代码规范</strong>的理解更加深入。
+            2014年10月，零基础加入学院宏奕工作室，期间用<strong>Bootstrap</strong>和<strong>jQuery</strong>写过少量的代码。
         </p>
         <p>
-            在task02中，<strong>封装个人jQuery库</strong>，同时在此期间不断的在慕课网上刷课程，
-            会<strong>页面内常见JavaScript操作</strong>，以及对<strong>JavaScript面向对象编程</strong>有了浅显的了解。
+            2015年2月通过在慕课网上刷视频教程学习,同时开始《JavaScript高级程序设计》等书籍的阅读。
         </p>
         <p>
+            2015年4月跟随(未加入)<strong>百度前端学院IFE</strong>深入学习前端技术，完成task01——个人博客，task02——js通用工具包，task03——个人任务管理管理器。
+        </p>
+    <!--    <p>
             task03,根据设计稿<strong>独立完成个人任务管理器</strong>。
             此段时间，编程能力提升最为迅速，算的上最为得意的作品。
-            对<strong>闭包</strong><strong>构造函数</strong><strong>设计模式</strong>有些许的理解。代码已提交至github,在线预览EarlyBirdss.github.io/TaskManagement
+            对<strong>闭包</strong><strong>构造函数</strong><strong>设计模式</strong>有些许的理解。代码已提交至github,网址github.com/EarlyBirdss/EarlyBirdss.github.io
+        </p>-->
+    </div>
+    <div class="time_line">实践篇</div>
+    <div class="content">
+        <ul>
+            <li>二次元网站首页静态页面的模仿</li>
+            <li>学习过程中大大小小的DOMO</li>
+            <li>个人任务管理器GTD TOOL</li>
+            <li>制作个人网页简历</li>
+        </ul>
+        <span><!--<i class="icon-magic"></i>-->github.com/EarlyBirdss/EarlyBirdss.github.io</span>
+     <!--   <p>
+
+        </p>
+        <p>
+    您好，我就是传说中Candy的闺蜜，能不能让HR看看我的代码先，我真不会面试，面试心态很很不好,紧张的砰砰砰就忘掉了。然而看到这个简历，
+    hr会重点问我个人任务管理器的东西吧，代码都是我独立完成的，完成的过程对于新手我而言也很痛苦，有好几天都是在改bug，考虑问题有点不全面。
+    我所有的代码地址在github.com/EarlyBirdss/EarlyBirdss.github.io
+        个人任务管理器的地址在github.com/EarlyBirdss/EarlyBirdss.github.io/TaskManagement但是个人任务管理器的在线DOMO演示是有问题的，我猜测可能跟localstorage有关，
+        但没有验证过。
+        我挺珍惜这次实习的机会，但也挺怕面试的，最理想的状态是没有面试，然而大概并无可能……囧o(╯□╰)o
+</p>
+<p>
+
+</p>-->
+</div>
+    <div class="time_line">项目篇</div>
+    <div class="content">
+        <p>个人任务管理器，算是我第一个完整的作品，总共进行了两次编写。第一次编写仅处理页面内基本JS操作未涉及数据存储。
+            第二次编写加入了存储功能，主要使用了local storage存储数据，构造函数创建对象，DOM2级事件处理程序，DOM操作，弹出层拖拽，
+            简单正则，Array和Data方法使用等。作为新手考虑问题还不太全面，改了很多bug，也学会了一些调试技巧。
+            <!--js部分使用两个构造函数返回新创建的任务类别或任务，
+            增加了获取本地数据来初始化页面的操作，申明了两个全局变量分别存放所有本地存储处理、视图处理的对象方法，另有一个main.js文件
+            存放主功能的处理函数。-->
         </p>
     </div>
 </div>
