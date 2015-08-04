@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="top-tool">
+    <button><i class=" icon-arrow-left"></i></button>
+    <button><i class=" icon-plane"></i></button>
+    <button class="fr submit" type="submit" id="submit"><i>交卷</i></button>
+</div>
+<div id="mask" class="">
+    <div class="article-box">
+        <div class="tip">
+            <i class="icon-tags"></i>
+            点击空格处，选择最恰当的单词
+        </div>
+        <div class="article" id="article">
+            <!--It's the first question parents ask when their child is diagnosed with autism (自闭症).
+            Will his future brothers or sisters have a higher risk of 1 <span class="" data-num="1">_____ </span>it, too?
+            According to the largest study of siblings (兄弟姐妹) in families with autism,
+            the answer is yes. Among 664 children who had at least one older sibling with the developmental disorder,
+            the 2<span class="" data-num="2"> _____ </span>risk of autism was nearly 19%, 3<span class="" data-num="3"> _____ </span>higher than previous sibling-recurrence estimates that were anywhere from 3% to 10%.
+            Kids with more than one older autistic sibling had an even higher risk of the disorder: 32%.
+            The 4<span class="" data-num="4"> _____ </span>suggest that genes play a key role in autism risk. But they also hint that other
+            environmental factors 5<span class="" data-num="5"> _____ </span>by siblings, like influences in the womb (子宫), may be important as well.
+            On the 6<span class="" data-num="6"> _____ </span>of the findings, the researchers recommend that doctors closely 7 <span class="" data-num="7">_____</span> younger siblings of autistic
+            children to pick up any early signs of the disorder, 8<span class="" data-num="8"> _____</span> an unusually large head or delayed language development
+            and communication skills. Evidence suggests that early 9<span class="" data-num="9">_____</span> and diagnosis of autism can help children take advantage of
+            therapies that can treat some of its 10<span class="" data-num="10">_____</span>-->
+        </div>
+    </div>
+
+    <table class="question-num" id="qus_num">
+        <!--<tr>
+            <td class="" data-num="1">1</td>
+            <td class="" data-num="2">2</td>
+            <td class="" data-num="3">3</td>
+            <td class="" data-num="4">4</td>
+            <td class="" data-num="5">5</td>
+            <td class="" data-num="6">6</td>
+            <td class="" data-num="7">7</td>
+            <td class="" data-num="8">8</td>
+            <td class="" data-num="9">9</td>
+            <td class="" data-num="10">10</td>
+        </tr>-->
+    </table>
+    <table cellspacing="0" cellpadding="0"  class="answers" id="answers"><!--
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>-->
+    </table>
+</div>
+
+<div class="report hide" id="report">
+    <h3 class="title">成绩报告</h3>
+    <h2 id="correct_rate"></h2>
+    <h4>正确率</h4>
+    <table id="check_table"></table>
+    <div class="button-group">
+        <button class="check-answer" id="check_answer">查解析</button>
+        <button class="back">回列表</button>
+    </div>
+</div>
+<div class="analysis" id="analysis">
+
+</div>
+
+<div class="test-input">
+    <h1>录入题目</h1>
+    <form action="" >
+        <label>试卷信息</label>
+        <input type="text" class="test-info">
+        <label>试卷内容</label>
+        <textarea class="test-article"></textarea>
+        <label>试卷选项</label>
+        <table class="test-option" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <label>01<input type="text"></label>
+                </td>
+                <td>
+                    <label>02<input type="text"></label>
+                </td>
+                <td>
+                    <label>03<input type="text"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>04<input type="text"></label>
+                </td>
+                <td>
+                    <label>05<input type="text"></label>
+                </td>
+                <td>
+                    <label>06<input type="text"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>07<input type="text"></label>
+                </td>
+                <td>
+                    <label>08<input type="text"></label>
+                </td>
+                <td>
+                    <label>09<input type="text"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>10<input type="text"></label>
+                </td>
+                <td>
+                    <label>11<input type="text"></label>
+                </td>
+                <td>
+                    <label>12<input type="text"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>13<input type="text"></label>
+                </td>
+                <td>
+                    <label>14<input type="text"></label>
+                </td>
+                <td>
+                    <label>15<input type="text"></label>
+                </td>
+            </tr>
+        </table>
+        <label>正确答案和解析</label>
+        <table class="test-answers" cellpadding="0" cellspacing="0">
+            <thead>
+            <tr>
+                <th>题号</th>
+                <th>答案</th>
+                <th>解析</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>1题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>2题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>3题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>4题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>5题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>6题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>7题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>8题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>9题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>10题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>11题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>12题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>13题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>14题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>15题</td>
+                <td><input type="text"></td>
+                <td><textarea></textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit">保存</button>
+        <button type="button">删除</button>
+        <button type="reset">重置</button>
+        <button type="button">添加答案项</button>
+    </form>
+</div>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/util.js" type="text/javascript"></script>
+</body>
+</html>

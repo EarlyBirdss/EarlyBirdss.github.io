@@ -1,0 +1,309 @@
+/*===========reset============*/
+html,body,a,p,h1,h2,h3,h4,h5,h6,strong,em,span,i,input,textarea,img,button,select,li,ol,ul,table,dd,dl,dt,div{
+    padding: 0;
+    margin:0;
+    outline:none;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-size:14px;
+}
+strong,em,i{
+    font-style: normal;
+    font-weight: normal;
+}
+input,button,textarea{
+    border:none;
+    background:#fff;
+}
+ul,li,ol{
+    list-style: none;
+}
+body{
+    width:760px;
+    margin:50px auto;
+    font-size:14px;
+    color:#555;
+    font-family: "Microsoft YaHei",微软雅黑, sans-serif !important;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+
+/*===============util==========================*/
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+.blue-back{
+    border-radius: 3px 3px 0 0;
+    color:#FFF !important;
+    background:#65CBF6 !important;
+}
+.blue-font{
+    color:#65CBF6;
+    text-decoration: underline;
+    text-decoration-color: #555;
+}
+.red-back{
+    border-radius: 3px 3px 0 0;
+    padding:2px 4px;
+    color:#ED7B87;
+    background: #DDD;
+}
+.blue{
+    background: #65CBF6 !important;
+}
+.red{
+    background:#ED7B87 !important;
+}
+.green{
+    background:#78D1BF !important;
+}
+.red-font{
+    color:#ED7B87;
+}
+.green-back{
+    border-radius: 3px 3px 0 0;
+    color:#FFF !important;
+    background: #78D1BF;
+    padding:2px 4px;
+    margin:0 4px;
+}
+.green-font{
+    color:#78D1BF;
+}
+.line-though{
+    text-decoration: line-through;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+/*===========normal=========================*/
+.top-tool{
+    background:#f3f3f3;
+    border-bottom:#ddd solid 1px;
+    width:100%;
+    height:40px;
+}
+.top-tool button{
+    width:60px;
+    height:100%;
+    text-align: center;
+    background: inherit;
+    font-size:18px;
+    color:#666;
+}
+.top-tool .submit{
+    border:#999 solid 1px;
+    border-radius: 3px 3px 0 0;
+}
+
+.mask{
+    background:rgba(0,0,0,.5);
+}
+
+.article-box{
+    width:100%;
+    height:300px;
+    overflow-y: scroll;
+    padding:20px 10px;
+    box-shadow: 0 -3px 5px rgba(0,0,0,.4) inset;
+}
+.article-box .tip{
+    font-size:16px;
+    font-weight: bold;
+    margin-bottom:15px;
+}
+.article-box .article{
+    text-indent: 25px;
+    line-height:2;
+}
+.question-num{
+    margin:20px auto 10px auto;
+    color:#FFF;
+}
+.question-num .pointed{
+    display: block;
+    position: absolute;
+    left:5px;
+    bottom:-10px;
+    border:10px solid transparent;
+    border-bottom:10px solid #DDDDDD;
+    border-top:0;
+}
+.question-num td{
+    padding:3px 10px;
+    border-radius:3px;
+    background:#DDDDDD;
+    position: relative;
+}
+.answers{
+    width:100%;
+}
+.answers td{
+    width:33.33%;
+    height:40px;
+    border:1px solid #ccc;
+    text-align:center;
+}
+.answers td:hover{
+    color:#65CBF6;
+}
+
+.report{
+    width:740px;
+    min-height:400px;
+    position:absolute;
+    top:100px;
+    left:50%;
+    margin-left:-370px;
+    background:#FFF;
+    z-index: 999;
+}
+.report .title{
+    font-size:18px;
+    font-weight:bold;
+    text-align: center;
+    height:50px;
+    line-height: 50px;
+    border-bottom:1px solid #DDD;
+}
+.report h2{
+    font-size:36px;
+    color:#65CBF6;
+    font-weight: bold;
+    text-align: center;
+    margin:30px 0 0 15px;
+}
+.report h4{
+    color:#999;
+    font-weight: bold;
+    text-align: center;
+}
+.report .button-group{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:60px;
+    border-top:1px solid #ddd;
+}
+.report button{
+    width:340px;
+    height:30px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%/150px;
+    background:#FFF;
+    margin: 15px 10px;
+    font-weight: bold;
+}
+.report .check-answer{
+    border-color: #78D1BF;
+    color:#78D1BF;
+}
+.report .back{
+    border-color: #65CBF6;
+    color: #65CBF6;
+}
+.report table{
+    width:680px;
+    margin:30px auto;
+    font-size:18px;
+}
+.report td{
+    width:20%;
+    height:50px;
+    text-align: center;
+}
+.analysis{
+    width:100%;
+    border-top:1px solid #ddd;
+    padding:20px 0;
+}
+
+.test-input{
+    padding:20px 30px;
+    background:#DDD;
+}
+.test-input h1{
+    font-size:28px;
+    text-align: center;
+    margin-bottom:20px;
+}
+.test-input label{
+    display: block;
+}
+.test-input .test-info{
+    width:100%;
+    height:28px;
+    background:#FFF;
+    border-radius: 3px;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+.test-input .test-article{
+    width:100%;
+    min-height: 300px;
+    border-radius: 3px;
+    border:none;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+.test-input table{
+    width:100%;
+    border:2px solid #666;
+    margin-top:5px;
+    margin-bottom: 20px;
+}
+.test-option tr{
+    height:40px;
+}
+.test-option td{
+    width:33.33%;
+    text-align: center;
+    border:1px solid #666;
+}
+.test-option input{
+    width:150px;
+    height:26px;
+    border-radius: 3px;
+    margin-left:8px;
+}
+.test-answers tr{
+    height:70px;
+}
+.test-answers td{
+    border:1px solid #666;
+    text-align: center;
+}
+.test-answers td:nth-child(3n+1){
+    width:20%;
+}
+.test-answers td:nth-child(3n),
+.test-answers td:nth-child(3n+2){
+    width:40%;
+}
+.test-answers input{
+    height:28px;
+    border-radius: 3px;
+}
+.test-answers textarea{
+    height:50px;
+    border-radius: 3px;
+}
+.test-input button{
+    padding:5px 10px;
+    border-radius: 3px;
+    margin:0 3px;
+}
