@@ -19,13 +19,13 @@ window.onload = function(){
     };
 
     var animate = function(offset){
-        var time = 300;
-        var interval = 10;
-        var speed = offset / ( time / interval);
-        var newLeft = parseInt( list.style.left) + offset;
+        var time = 300;  //位移总时间
+        var interval = 10;   //位移时间间隔
+        var speed = offset / ( time / interval);   //每次位移量
+        var newLeft = parseInt( list.style.left) + offset;   //移动后图片左坐标
 
-        function start() {
-            if ((speed > 0 &&  newLeft > parseInt(list.style.left) ) || (speed < 0 && newLeft <  parseInt(list.style.left) )) {
+        (function start() {
+            if ((speed > 0 &&  newLeft > parseInt(list.style.left)) || (speed < 0 && newLeft <  parseInt(list.style.left))) {
                 list.style.left = parseInt(list.style.left) + speed + 'px';
                 setTimeout(start,interval);
             }else{
@@ -36,12 +36,11 @@ window.onload = function(){
                     list.style.left = -3000 + 'px';
                 }
             }
-        }
-        start();
+        })();
     };
 
     var showButton = function(){
-        for( var i = 0 ;i < buttons.length ;i++){
+        for( var i = 0; i < buttons.length; i++){
             buttons[i].className = '';
         }
         index = ( index == 6 ) ? 1 :index;
