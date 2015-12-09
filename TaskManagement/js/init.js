@@ -10,7 +10,7 @@
 window.onload = function() {
 
 
-	//window.localStorage.clear();
+	window.localStorage.clear();
 	if (!data.getItem('all') || !data.getItem('default')) {
 		window.localStorage.clear();
 		var allTask = new Cate('全部分类', null, false, 'all');
@@ -36,13 +36,13 @@ window.onload = function() {
 
 
 
-	var st = window.localStorage;
-	for (var k = 0; k < st.length; k++) {
-		var key = st.key(k);
-		var value = st.getItem(key);
-		console.log(key);
-		console.log(value);
-	}
+    var st = window.localStorage;
+    for (var k = 0; k < st.length; k++) {
+        var key = st.key(k);
+        var value = st.getItem(key);
+        console.log(key);
+        console.log(value);
+    }
 
 
 
