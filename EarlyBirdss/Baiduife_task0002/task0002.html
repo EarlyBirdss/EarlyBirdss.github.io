@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>task0002.html</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    function add(num1,num2){
+        return num1+num2;
+    }
+    function handleEvents(){
+        var num1 = parseInt($("num1").value);
+        var num2 = parseInt($("num2").value);
+        return add(num1,num2);
+    }
+    function renderResult(){
+        $("tip").innerHTML = handleEvents();
+    }
+</script>
+<script src="js/util.js"></script>
+<body>
+<input type="text" id="num1">
+<input type="text" id="num2">
+<input type="button" id="addbtn" value="add" onclick="renderResult()">
+<span id="tip"></span>
+<!--<div id="container">
+    <div class="column" id="left"></div>
+    <div class="column" id="center"></div>
+    <div class="column" id="right"></div>
+</div>-->
+</body>
+</html>
