@@ -36,13 +36,13 @@ window.onload = function() {
 
 
 
-    /*var st = window.localStorage;
+    var st = window.localStorage;
     for(var k = 0; k < st.length; k++){
         var key = st.key(k);
         var value = st.getItem(key);
         console.log(key);
         console.log(value);
-    }*/
+    }
 
 
 
